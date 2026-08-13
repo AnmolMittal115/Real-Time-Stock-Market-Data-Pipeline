@@ -47,7 +47,8 @@ For near-real-time ingestion, a Python `while` loop requests **1-minute market d
 
 ## 🥉 Bronze Layer
 
-Raw Parquet files are loaded into the Bronze layer of the Fabric Lakehouse.
+The Bronze layer of the Microsoft Fabric Lakehouse contains 1,000+ raw Parquet files. Each stock contributes approximately 35 records, resulting in around 35,000 current stock records. 
+In addition, approximately 64,000 historical records are stored in the Bronze layer, bringing the total dataset to roughly 100,000 records which is loaded to the bronze lakehouse of fabric.
 
 ## 🥈 Silver Layer — Notebook 1
 
