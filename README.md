@@ -4,7 +4,7 @@ An end-to-end **Data Engineering project** that ingests historical and near-real
 
 ## 🏗️ Architecture
 
-![Data Pipeline Architecture](architecture/data_pipeline_architecture.png)
+Architechture/data_pipeline_architecture.png
 
 **Yahoo Finance → Python/yFinance → Parquet → Fabric Lakehouse → Silver → Gold → Validation → Fabric Warehouse → Power BI**
 
