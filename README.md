@@ -138,14 +138,14 @@ The reports include stock/company selection through slicers.
 
 ## ⚡ Partitioning & Query Optimization
 
-The Gold-layer stock price data is partitioned by **year and month** to organize the dataset based on the time dimension.
+The Silver-layer cleanse data is partitioned by **year and month** to organize the dataset based on the time dimension.
 
 This partitioning strategy improves query efficiency by allowing Spark to perform **partition pruning**, so queries that filter by year or month can avoid scanning unrelated partitions.
 
 Example partition structure:
 
 ```text
-Fact_Stock_Prices/
+cleanse_data/
 ├── year=2024/
 │   ├── month=01/
 │   ├── month=02/
@@ -157,7 +157,7 @@ Fact_Stock_Prices/
 └── year=2026/
     ├── month=01/
     └── ...
-
+```
 ## 📁 Repository Structure
 
 ```text
