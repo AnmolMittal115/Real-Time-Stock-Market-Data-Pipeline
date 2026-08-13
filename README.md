@@ -193,27 +193,27 @@ Real-Time-Stock-Market-Pipeline/
 ## 🔄 Pipeline Summary
 
 ```text
-Yahoo Finance
-      ↓
-Python / yFinance
-      ↓
-Parquet Files
-      ↓
-Bronze
-      ↓
-Silver
-      ↓
-Gold
- ┌────┴───────────┐
+      Yahoo Finance
+            ↓
+    Python / yFinance
+            ↓
+     Parquet Files
+            ↓
+         Bronze
+            ↓
+         Silver
+            ↓
+          Gold
+    ┌───────┴────────┐
 Dim_Date       Dim_Stock
       \            /
-       Fact_Stock_Prices
+     Fact_Stock_Prices
               ↓
        Data Validation
               ↓
       Fabric Warehouse
               ↓
-           Power BI
+          Power BI
 ```
 
 ## 🎯 Project Purpose
