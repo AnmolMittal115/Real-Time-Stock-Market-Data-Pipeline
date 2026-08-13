@@ -136,6 +136,28 @@ Power BI connects to the curated analytical model and provides interactive repor
 
 The reports include stock/company selection through slicers.
 
+## ⚡ Partitioning & Query Optimization
+
+The Gold-layer stock price data is partitioned by **year and month** to organize the dataset based on the time dimension.
+
+This partitioning strategy improves query efficiency by allowing Spark to perform **partition pruning**, so queries that filter by year or month can avoid scanning unrelated partitions.
+
+Example partition structure:
+
+```text
+Fact_Stock_Prices/
+├── year=2024/
+│   ├── month=01/
+│   ├── month=02/
+│   └── ...
+├── year=2025/
+│   ├── month=01/
+│   ├── month=02/
+│   └── ...
+└── year=2026/
+    ├── month=01/
+    └── ...
+
 ## 📁 Repository Structure
 
 ```text
@@ -193,27 +215,27 @@ Real-Time-Stock-Market-Pipeline/
 ## 🔄 Pipeline Summary
 
 ```text
-      Yahoo Finance
-            ↓
-    Python / yFinance
-            ↓
-     Parquet Files
-            ↓
-         Bronze
-            ↓
-         Silver
-            ↓
-          Gold
-    ┌───────┴────────┐
+.      Yahoo Finance
+.           ↓
+.    Python / yFinance
+.            ↓
+.     Parquet Files
+.            ↓
+.         Bronze
+.            ↓
+.         Silver
+.            ↓
+.          Gold
+.    ┌───────┴────────┐
 Dim_Date       Dim_Stock
-      \            /
-     Fact_Stock_Prices
-              ↓
-       Data Validation
-              ↓
-      Fabric Warehouse
-              ↓
-          Power BI
+.      \            /
+.     Fact_Stock_Prices
+.              ↓
+.       Data Validation
+.              ↓
+.      Fabric Warehouse
+.              ↓
+.          Power BI
 ```
 
 ## 🎯 Project Purpose
