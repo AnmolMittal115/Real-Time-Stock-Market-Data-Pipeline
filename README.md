@@ -9,6 +9,8 @@ An end-to-end **Data Engineering project** that ingests historical and near-real
 
 **Yahoo Finance → Python/yFinance → Parquet → Fabric Lakehouse → Silver → Gold → Validation → Fabric Warehouse → Power BI**
 
+
+
 ## 🚀 Key Features
 
 - Historical market data ingestion for approximately **5 years**
